@@ -32,6 +32,11 @@
     "vite": "^4.4.5",
     "vitest": "^1.6.0"
   },
+  "overrides": {
+    "@trezor/connect-plugin-stellar": {
+      "@stellar/stellar-sdk": "$@stellar/stellar-sdk"
+    }
+  },
   "keywords": [
     "Stellar",
     "Soroban",
