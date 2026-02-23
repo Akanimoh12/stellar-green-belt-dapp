@@ -1,4 +1,5 @@
 import React from 'react';
+import { createPortal } from 'react-dom';
 import { FiX, FiLink, FiExternalLink } from 'react-icons/fi';
 import { SiStellar } from 'react-icons/si';
 import { useWallet } from '../hooks/useWallet';
@@ -24,7 +25,7 @@ const WalletModal: React.FC<WalletModalProps> = ({ open, onClose }) => {
 
   if (!open) return null;
 
-  return (
+  return createPortal(
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-box" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
@@ -72,7 +73,8 @@ const WalletModal: React.FC<WalletModalProps> = ({ open, onClose }) => {
           </a>
         </p>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 

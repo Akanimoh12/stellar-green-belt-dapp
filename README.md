@@ -4,17 +4,21 @@
 
 A production-grade **Stellar Soroban Token Vault** with **inter-contract calls**, a **custom SVT reward token**, CI/CD pipeline, and mobile-responsive design. Built for the Stellar Development Foundation Green Belt Challenge.
 
-> **Live Demo**: [https://stellar-green-belt-dapp.vercel.app](https://stellar-green-belt-dapp.vercel.app)
+> **Live Demo**: [https://stellar-green-belt-dapp.vercel.app/](https://stellar-green-belt-dapp.vercel.app/)
 
 > **Deployed Contracts**: 
 Vault:(`CB4WTU6F45BHCEQBBBS7P5RXEFWD5ELMO3XTWEGDRVV3NS5DDZF6QBSN`), 
 SVT Token (`CABSDKREP4SBIHCIAOPSL2O5DL575N44ZAAUNFXUV2YN7UYSOX5AONWX`)
 
+> **Video Demo**: [Video Walkthrough](https://www.loom.com/share/148a3b0638714fb1962fc31a70445c73)
+
 > **Mobile Screenshot**
 > ![mobile-screenshot](screenshot_of_application/mobile_screenshot.png)
 
 > **Screenshot or badge: CI/CD pipeline running**
+> ![before-deployment-of-vercel-everything passes apart from the vercel deployment](screenshot_of_application/before-vercel-deployment.png)
 > ![ci-cd-pipeline](screenshot_of_application/ci_cd_pipeline.png)
+
 ---
 
 ## Features
