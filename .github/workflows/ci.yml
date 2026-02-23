@@ -63,25 +63,5 @@ jobs:
         working-directory: contracts/token
         run: cargo check --target wasm32-unknown-unknown --release
 
-  deploy-preview:
-    name: Deploy Preview (Vercel)
-    needs: lint-test-build
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: dist
-          path: dist/
-
-      - name: Deploy to Vercel
-        uses: amondnet/vercel-action@v25
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
-          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+  # Deployment is handled automatically by Vercel's GitHub integration.
+  # No manual deploy job needed — Vercel triggers on every push to main.
